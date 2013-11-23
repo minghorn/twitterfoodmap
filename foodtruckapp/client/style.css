@@ -1,0 +1,195 @@
+html, body, p, ul {
+	margin: 0px;
+	padding: 0px;
+	font-family: Lato;
+	font-weight: 300;
+	-webkit-margin-before: none;
+	-webkit-margin-after: none;
+	-webkit-margin-start: none;
+	-webkit-margin-end: none;
+	-webkit-padding-start: none;
+}
+#login {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: 150px;
+	background-color: #7f8c8d;
+	width: 150px;
+	opacity: .8;
+}
+a.login {
+	color: #fff;
+	opacity: 1;
+	font-size: 18px;
+}
+.hola {
+	font-size: 14px;
+	text-transform: none;
+	padding-bottom: 30px;
+}
+.form {
+	height: 140px;
+	width: 390px;
+	border-top: solid 5px #fff;
+	background-color: #e74c3c;
+	color: #fff;
+	position: relative;
+}
+#header {
+	padding-bottom: 10px;
+}
+span#nonprofit {
+	padding-left: 95px;
+	line-height: 50px;
+}
+span#back_button {
+	line-height: 35px;
+	padding-left: 5px;
+	position:fixed;
+	top:4px;
+}
+#username {
+	font-family: Lato;
+	text-transform: uppercase;
+	font-size: 20px;
+	color: #fff;
+}
+input[type="text"]{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+h1 {
+	font-family: 'Lato';
+	font-weight: 300;
+	font-size: 18px;
+	height: 50px;
+	background-color: #2ecc71;
+	color: #fff;
+	margin: 0px;
+}
+.landing {
+	background-image: url("http://i40.tinypic.com/53qknd.jpg");
+	width: 400px;
+	height: 500px;
+}
+.landing a {
+	font-size: 18px;
+	text-align: center;
+}
+#container {
+	height: 150px;
+	width: 150px;
+	opacity: .8;
+	color: #222;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button {
+-webkit-align-items: flex-start;
+cursor: default;
+font-family: 'Lato';
+font-weight: 300;
+color: #fff;
+border: none;
+height: 40px;
+width: 150px;
+text-transform: uppercase;
+background-color: #2ecc71;
+display: inline;
+
+}
+
+#profile {
+	position: fixed;
+	left: 95px;
+	top: 3px;
+}
+#profilebutton{
+	position:fixed;
+	left: 10px;
+}
+#profile_name {
+	position: relative;
+	font-weight: 400;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding-bottom: 5px;
+}
+#profile_image {
+	position: relative;
+	padding: 5px;
+}
+ul li{
+	width: 400px;
+	-webkit-align-items: flex-start;
+	text-align: center;
+	cursor: default;
+	font-family: 'Lato';
+	font-weight: 300;
+	color: #fff;
+	border: none;
+	height: 40px;
+	text-transform: uppercase;
+	background-color: #2ecc71;
+	display: inline;
+}
+#welcomebuttons {
+	display: inline;
+	padding: none;
+	margin: none;	
+}
+.VButton:hover {
+	background-color:#27ae60;
+}
+.PButton:hover {
+	background-color:#27ae60;
+}
+.hours_worked {
+	padding-top: 7px;
+	text-transform: uppercase;
+	font-weight: 300;
+	color: #fff;
+}
+span#worked {
+	font-size: 24px;
+	font-weight: 400;
+}
+.bounding_box {
+	position: relative;
+	height: 50px;
+	width: 150px;
+	background-color: #e74c3c;
+	border-radius: 7px;
+}
+#select1 {
+	position: relative;
+	margin-top: 10px;
+}
+#credits {
+	text-transform: lowercase;
+	font-size: 12px;
+	text-align: center;
+	color: #2c3e50;
+	padding-top: 30px;
+}
+span.category {
+	position: absolute;
+	left: 320px;
+}
+.nonprofit_profile {
+	position: absolute;
+	top: 0px;
+	height: 136px;
+	width: 280px;
+	text-align: left;
+	padding-left: 110px;
+	overflow: hidden;
+}
+p.crop {
+	height: 100px;
+	width: 100px;
+	overflow: hidden;
+}

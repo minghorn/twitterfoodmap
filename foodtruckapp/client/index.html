@@ -1,0 +1,159 @@
+<head>
+	<title> Accounts </title>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript"
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUdRG2BYzJlGi71Snb2za4CgVs55cAEgY&sensor=true">
+    </script>
+    <script src="js/maps.js"></script>
+
+</head>
+<body>
+	
+	{{>bodyTemplate}}
+
+</body>
+
+
+<template name="landing">
+	<div id="location">
+		<div class="hola"><a>I WANNA EAT!</a></div>
+	</div>
+</template>
+
+<template name="bodyTemplate">
+	{{#if islanding}}
+		{{>landing}}
+	{{/if}}
+
+	{{#if isMap}}
+		{{>Map}}
+	{{/if}}
+
+	{{#if isSignUp}}
+		{{>SignUp}}
+	{{/if}}
+
+	{{#if isFTlist}}
+		{{>FTlist}}	
+	{{/if}}
+
+	{{#if isCategories}}
+		{{>Categories}}
+	{{/if}}
+
+	{{#if isAsian}}
+		{{>FTlist}}
+	{{/if}}
+
+	{{#if isMexican}}
+		{{>FTlist}}
+	{{/if}}
+
+	{{#if isSandwiches}}
+		{{>FTlist}}
+	{{/if}}
+
+	{{#if isBBQ}}
+		{{>FTlist}}
+	{{/if}}
+
+	{{#if isDessert}}
+		{{>FTlist}}
+	{{/if}}
+
+	{{#if isOther}}
+		{{>FTList}}
+	{{/if}}
+	
+	{{#if isProfile}}
+		{{>backButton}}
+		<div id="profile">
+			{{>Profile}}
+		</div>
+	{{/if}}
+
+</template>
+
+<template name="FTlist">
+	<div class="FTlist">
+		{{#each Food_Trucks getPage}}
+  			{{>Food_Truck}}
+		{{/each}}
+	</div>
+</template>
+
+
+<!--DISPLAY OF INDIVIDUAL FOOD TRUCK INFO TEMPLATE-->
+<template name="Food_Truck">
+<center>
+	<div class="form">
+		<p class="crop"><span class="picture"><img src= {{picture}} style="height: 80px; width: 80px; position: absolute; left: 15px; padding-top:30px; "</span></p>
+		<div class="ft_profile">
+			<p><span class="name">{{name}}</span></p>
+			<p><span class="twitter">{{twitter}}</span></p>
+			<p><span class="phone">{{phone}}</span></p>
+			<p><span class="description">{{description}}</span></p>
+			<p><span class="categories">{{categories}}</span></p>
+		</div>
+	</div>
+</center>
+</template>
+
+
+<!--SIGN UP FORM TEMPLATE-->
+<template name="SignUp">
+		<div class ="SignUp">
+		
+			<div id="header">
+				<h1><span id="back_button"><input type="button" class="back" value="<" style="font-size:30px; width: 25px; height: 30px; background-color: transparent;"/></span><span id="foodtrucks">FOOD TRUCK APPLICATION</span></h1>
+			</div>
+			<center>
+        	<p><input type="text" id="name" placeholder="Food Truck Name" size="70px"/></p>
+			 <p><input type="text" id="phone" placeholder="Phone Number" size="70px"/></p>
+			 <p><input type="text" id="food" placeholder="Types of Food Sold" size="70px"/></p>
+			 <p><input type="text" id="twitter" placeholder="Food Truck Twitter Handle" size="70px"/></p>
+			 <p><select id="categories" placeholder = "Choose Option">
+			 	<option value = "Asian" selected="selected">Asian</option>
+			 	<option value = "Mexican">Mexican</option>
+			 	<option value = "Sandwiches">Sandwiches</option>
+			 	<option value = "BBQ">BBQ</option>
+			 	<option value = "Dessert">Dessert</option>
+			 	<option value = "Other">Other</option>
+			 </select></p>
+			
+        	<p><input type="button" class="add" value="Submit" />
+        </center>
+		</div>
+</template>
+
+<!--CATEGORIES LINKS LIST TEMPLATE-->
+<template name="Categories">
+	<div class="Categories">
+	<ul>
+		<li><span><input type="button" class="Asian" value="Asian" style="width:400px; height: 60px; background-color:#bdc3c7;"/></span></li>
+		<li><span><input type="button" class="Mexican" value="Mexican" style="width:400px; height: 60px; background-color:#95a5a6;"/></span></li>
+		<li><span><input type="button" class="Sandwiches" value="Sandwiches" style="width:400px; height: 60px; background-color:#7f8c8d;"/></span></li>
+		<li><span><input type="button" class="BBQ" value="BBQ" style="width:400px; height: 60px; background-color:#34495e;"/></span></li>
+		<li><span><input type="button" class="Dessert" value="Dessert" style="width:400px; height: 60px; background-color:#2c3e50;"/></span></li>
+		<li><span><input type="button" class="Other" value="Other" style="width:400px; background-color:#e74c3c; height: 60px;"/></span></li>
+		<li><span><input type="button" class="Register" value="Submit New Food Truck" style="width:400px; background-color:#e74c3c; height: 60px;"/></span></li>
+	</ul>
+</template>
+
+<!--BACK BUTTON TEMPLATE-->
+<template name="backButton">
+	<div class="backButton">
+		<input type="button" class="Back" value="<" style="font-size:40px; color:#2ecc71; background-color: transparent; width: 50px;"/>
+	</div>
+</template>
+
+<!--MAIN MAPVIEW TEMPLATE-->
+<template name="Map">
+	<div class="Map">
+		<div id="map-canvas"/>
+	</div>
+</template>
+
+
+
